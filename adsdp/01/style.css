@@ -9,6 +9,8 @@
     font-weight: 200;
     opacity: 1;
   }
+  
+  
   &:after {
     content: ' ';
     position: absolute;

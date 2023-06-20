@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Ex Gaming | Update</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex Gaming | Updatelog</title>
   <link rel="stylesheet" type="text/css" href="responsive.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="animated.css">
@@ -16,6 +17,7 @@
     body{
      width: 100%;
      padding: 20px;
+     
      
     }
     .date{
@@ -39,7 +41,7 @@
        margin-bottom: 90px;
        border: 2px solid grey;
        border-radius: 10px;
-       margin-top: 20px;
+       margin-top: 20px
        margin: auto ;
        color: white;
        padding: 10px;
@@ -60,18 +62,34 @@
   min-width: 100%; 
   min-height: 100%;
   background-color: black;
-    overflow: hidden;
-    background: var(--primary-color) no-repeat center center/cover; 
-  }
 }
-.playvidex{
-  width: 130px;
+
+.yvidex video{
   position: fixed;
-  top: 20px;
-  margin-left: 8em;
-  float: left;
-  height: 60px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
 }
+
+@media only screen and (min-width: 500px) {
+  body {
+ padding: 0;
+ top: 0;
+ padding-top: 0;
+ margin-top: 0;
+ height: auto;
+ background-color: black;
+}
+@media only screen and (min-width: 500px) {
+  .yvid video{
+ display: none;
+ top: 0;
+ background-color: red;
+ width: 100%;
+ height: auto;
+}
+
 .pAusevidex{
   top: 20px;
   width: 130px;
@@ -79,25 +97,34 @@
   float: left;
   margin-left: 2em;
 }
+@media only screen and (max-width: 500px) {
+  .yvidex video{
+ display: none;
+ top: 0;
+ position: fixed;
+ background-color: red;
+ width: 100%;
+ height: auto;
+}
+
 @media only screen and (min-width: 600px) {
   .pAusevidex {
-    margin-left: 25em;
+    margin-left: 13em;
     
   }
-  @media only screen and (min-width: 600px) {
-  .playvidex {
-    margin-left: 19em;
-
-  }
+ 
  </style>
- <button class="playvidex" onclick="playVid()" type="button">Play</button>
+ <body onclick="playVid()">
  
- <button class="pAusevidex" onclick="pauseVid()" type="button">Pause</button>
- 
- 
+<div class="yvidex">
+<video autoplay loop >
+  <source src="/v/bexdc.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video></div>
+
 <div class="yvid">
-<video autoplay loop id="Hev">
-  <source src="https://i.imgur.com/DImYAUq.mp4" type="video/mp4">
+<video autoplay muted loop id="Hev">
+  <source src="/v/bex.mp4"  type="video/mp4">
   Your browser does not support HTML5 video.
 </video></div>
  
@@ -108,27 +135,28 @@
  
  
  <div class="info">
- <p class="date">14 june 2023</p>
+ <p  class="date">14 june 2023</p>
  <h1 class="discription">animation added to Ex Gaming</h1>
  </div>
  
  
   <div class="info">
  <p class="date">14 june 2023</p>
- <h1 class="discription">some bug fixes</h1>
+ <h1 class="discription">some bug's are fixed</h1>
  </div>
-
+ 
+ </div>
  </body>
  </html>
  <script> 
 let vid = document.getElementById("Hev"); 
 
 function playVid() { 
-  vid.play(); 
+  vid.muted = false;
 } 
 
 function pauseVid() { 
-  vid.pause(); 
+  vid.muted = true;
 } 
 </script> 
 

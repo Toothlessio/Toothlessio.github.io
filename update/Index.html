@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Ex Gaming | Update Log</title>
-   <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex Gaming | Update</title>
   <link rel="stylesheet" type="text/css" href="responsive.css">
-  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="animated.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +12,24 @@
 <body>
   <style>
     body{
-  
-     height: auto;
+     width: 100%;
+     padding: 20px;
+     
     }
     .date{
-      border: 4px solid black;
+      border: 4px solid grey;
       padding: 9px;
-      width: 150px;
-      font-size: 23px;
+      color: white;
+      width: 170px;
+      font-size: 22px;
       border-radius: 20px;
       font-family: 'Josefin Sans', cursive;
+      position: relative;
     }
-   
+     .date p{
+         text-align: center;
+       }
+       
     .discription{
        font-size: 20px;
        padding: 2px;
@@ -34,24 +37,64 @@
        margin-bottom: 90px;
        border: 2px solid grey;
        border-radius: 10px;
-       margin-top: 20px
+       margin-top: 20px;
        margin: auto ;
        color: white;
        padding: 10px;
        font-family: Poppins;
+       position: relative;
        
       
     }
+    button{
+      position: relative;
+      font-family: Poppins;
+      color: black;
+    }
+  .yvid video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  background-color: black;
+}
+.playvidex{
+  width: 130px;
+  position: fixed;
+  top: 20px;
+  margin-left: 8em;
+  float: left;
+  height: 60px;
+}
+.pAusevidex{
+  top: 20px;
+  width: 130px;
+  position: fixed;
+  float: left;
+  margin-left: 2em;
+}
+@media only screen and (min-width: 600px) {
+  .pAusevidex {
+    margin-left: 25em;
+    
+  }
+  @media only screen and (min-width: 600px) {
+  .playvidex {
+    margin-left: 19em;
+
+  }
  </style>
-  <div class="welcomemsg">
-    <button onclick="playVid()"><p>EX GAMING</p></button>
-</div>
-<div class="summer">
- <center><video id="Hev" src="ads.mp4" loop autoplay width="400px"></video></center>
- </div>
+ <button class="playvidex" onclick="playVid()" type="button">Play</button>
+ 
+ <button class="pAusevidex" onclick="pauseVid()" type="button">Pause</button>
  
  
- 
+<div class="yvid">
+<video autoplay loop id="Hev">
+  <source src="/v/bex.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video></div>
  
 <div class="info">
  <p class="date">12 june 2023</p>
@@ -70,7 +113,28 @@
  <h1 class="discription">some bug fixes</h1>
  </div>
  
+ <div class="info">
+ <p class="date">14 june 2023</p>
+ <h1 class="discription">animation added to Ex Gaming</h1>
+ </div>
  
+ 
+  <div class="info">
+ <p class="date">14 june 2023</p>
+ <h1 class="discription">some bug fixes</h1>
+ </div>
+ 
+  <div class="info">
+ <p class="date">14 june 2023</p>
+ <h1 class="discription">animation added to Ex Gaming</h1>
+ </div>
+ 
+ 
+  <div class="info">
+ <p class="date">14 june 2023</p>
+ <h1 class="discription">some bug fixes</h1>
+ </div
+ >
  </body>
  </html>
  <script> 

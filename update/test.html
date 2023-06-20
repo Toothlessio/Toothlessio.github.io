@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@600&family=Poppins:wght@600&family=Rubik:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+<body onclick="playVid()">
 <style>
      .yvid video{
   position: fixed;
@@ -38,5 +39,16 @@
   Your browser does not support HTML5 video.
 </video></div>
 
+    <script> 
+let vid = document.getElementById("Hev"); 
+
+function playVid() { 
+  vid.muted = false;
+} 
+
+function pauseVid() { 
+  vid.muted = true;
+} 
+</script> 
 </body>
 </html>

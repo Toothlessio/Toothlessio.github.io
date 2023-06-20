@@ -1,23 +1,24 @@
- const youtubeKey = ' ADD YOUR KEY HERE';
+// 1
+$(window).load(function () {
+  $("video[autoplay]").get(0).play();
+});
 
-    const youtubeUser = ' ADD YOUR USER ID HERE';
 
-    const subCount = document.getElementById('subCount');
-    const delay = 1000; // 10 min
+// 2
+$(window).on("scroll", function() {
+var video = $("video[autoplay]").get(0);
 
-    let getSubscribers = () => {
+if (video.paused) {
+  video.play();
+}
+});
 
-        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
-        .then(response => {
-            return response.json()
-        })
-        .then(data => {
-            console.log(data);
-            subCount.innerHTML = data["items"][0].statistics.subscriberCount;
-        })
 
-    }
+// 3
+$(window).on("touchstart touchmove touchend touchcancel", function () {
+  var video = $("video[autoplay]").get(0);
 
-    setInterval(() => {
-        getSubscribers();
-    }, delay);
+  if (video.paused) {
+    video.play();
+  }
+});
